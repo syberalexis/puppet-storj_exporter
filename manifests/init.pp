@@ -62,9 +62,9 @@ class storj_exporter (
 
   # Service
   Variant[Stdlib::Ensure::Service, Enum['absent']] $service_ensure           = 'running',
-  Stdlib::Port                                     $port                     = 14002,
+  Stdlib::Port                                     $port                     = 9651,
   Stdlib::Host                                     $storj_host_address       = '127.0.0.1',
-  Stdlib::Port                                     $storj_api_port           = 9651,
+  Stdlib::Port                                     $storj_api_port           = 14002,
 
   # Extra Management
   Boolean                                          $manage_python            = true,
@@ -83,7 +83,7 @@ class storj_exporter (
 
   if $manage_python {
     class { 'python':
-      version => '3',
+      version => 'python3',
     }
 
     Class['python'] -> Class['storj_exporter::service']

@@ -137,7 +137,7 @@ Data type: `Stdlib::Port`
 
 Storj exporter port (required to be accessible).
 
-Default value: 14002
+Default value: 9651
 
 ##### `storj_host_address`
 
@@ -153,7 +153,7 @@ Data type: `Stdlib::Port`
 
 Storj api port.
 
-Default value: 9651
+Default value: 14002
 
 ##### `manage_python`
 
