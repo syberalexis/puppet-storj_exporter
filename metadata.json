@@ -1,6 +1,6 @@
 {
   "name": "maeq-storj_exporter",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": "maeq",
   "summary": "This module install Prometheus Exporter to Storj",
   "license": "Apache-2.0",

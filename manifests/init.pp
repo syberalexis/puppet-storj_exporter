@@ -73,7 +73,7 @@ class storj_exporter (
   if $download_url {
     $real_download_url = $download_url
   } else {
-    $real_download_url = "${base_url}/v${version}.${download_extension}"
+    $real_download_url = "${base_url}/${version}.${download_extension}"
   }
 
   include storj_exporter::install

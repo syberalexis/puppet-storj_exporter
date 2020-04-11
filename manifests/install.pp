@@ -93,11 +93,11 @@ class storj_exporter::install (
   # Python dependencies
   if $python_required_packages {
     $python_required_packages.each |String $package| {
-      python::pip { $package:
+      ensure_resource('python::pip', $package, {
         ensure       => 'present',
         pkgname      => $package,
         pip_provider => 'pip3',
-      }
+      })
     }
   }
 }
