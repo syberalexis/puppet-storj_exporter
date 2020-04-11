@@ -1,0 +1,70 @@
+{
+  "name": "maeq-storj_exporter",
+  "version": "0.1.0",
+  "author": "maeq",
+  "summary": "This module install Prometheus Exporter to Storj",
+  "license": "Apache-2.0",
+  "source": "https://github.com/syberalexis/puppet-storj_exporter.git",
+  "project_page": "https://github.com/syberalexis/puppet-storj_exporter",
+  "issues_url": "https://github.com/syberalexis/puppet-storj_exporter/issues",
+  "dependencies": [
+    {
+      "name": "puppetlabs/stdlib",
+      "version_requirement": ">= 6.2.0 < 7.0.0"
+    },
+    {
+      "name": "puppet/archive",
+      "version_requirement": ">= 4.4.0 < 5.0.0"
+    },
+    {
+      "name": "puppet/python",
+      "version_requirement": ">= 4.0.0 < 5.0.0"
+    }
+  ],
+  "operatingsystem_support": [
+    {
+      "operatingsystem": "CentOS",
+      "operatingsystemrelease": [
+        "7"
+      ]
+    },
+    {
+      "operatingsystem": "RedHat",
+      "operatingsystemrelease": [
+        "8"
+      ]
+    },
+    {
+      "operatingsystem": "Debian",
+      "operatingsystemrelease": [
+        "9"
+      ]
+    },
+    {
+      "operatingsystem": "Ubuntu",
+      "operatingsystemrelease": [
+        "18.04"
+      ]
+    },
+    {
+      "operatingsystem": "Fedora",
+      "operatingsystemrelease": [
+        "29"
+      ]
+    }
+  ],
+  "requirements": [
+    {
+      "name": "puppet",
+      "version_requirement": ">= 4.10.0 < 7.0.0"
+    }
+  ],
+  "tags": [
+    "storj",
+    "metrics",
+    "exporter"
+  ],
+  "pdk-version": "1.15.0",
+  "template-url": "pdk-default#1.15.0",
+  "template-ref": "tags/1.15.0-0-g0bc522e"
+}

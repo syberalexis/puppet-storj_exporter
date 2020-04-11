@@ -1,0 +1,19 @@
+# THIS FILE IS MANAGED BY PUPPET
+[Unit]
+Description=Storj Exporter service
+Wants=storagenode.service
+After=storagenode.service
+
+[Service]
+User=<%= @user %>
+Group=<%= @group %>
+Type=simple
+Environment=STORJ_EXPORTER_PORT=<%= @port %>
+Environment=STORJ_HOST_ADDRESS=<%= @storj_host_address %>
+Environment=STORJ_API_PORT=<%= @storj_api_port %>
+ExecStart=/usr/bin/python3 <%= @bin_dir %>/storj-exporter
+Restart=on-failure
+RestartSec=5s
+
+[Install]
+WantedBy=multi-user.target
