@@ -20,7 +20,7 @@
 #  User running storj_exporter.
 # @param group
 #  Group under which storj_exporter is running.
-# @param usershell
+# @param user_shell
 #  if requested, we create a user for storj_exporter. The default shell is false. It can be overwritten to any valid path.
 # @param extra_groups
 #  Add other groups to the managed user.
@@ -41,7 +41,7 @@ class storj_exporter::install (
   Boolean                  $manage_group             = $storj_exporter::manage_group,
   String                   $user                     = $storj_exporter::user,
   String                   $group                    = $storj_exporter::group,
-  Stdlib::Absolutepath     $usershell                = $storj_exporter::usershell,
+  Stdlib::Absolutepath     $user_shell               = $storj_exporter::user_shell,
   Array[String]            $extra_groups             = $storj_exporter::extra_groups,
 
   # Python dependencies
@@ -76,7 +76,7 @@ class storj_exporter::install (
       ensure => 'present',
       system => true,
       groups => concat([$group], $extra_groups),
-      shell  => $usershell,
+      shell  => $user_shell,
     })
 
     if $manage_group {

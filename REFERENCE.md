@@ -107,7 +107,7 @@ Group under which storj_exporter is running.
 
 Default value: 'storj_exporter'
 
-##### `usershell`
+##### `user_shell`
 
 Data type: `Stdlib::Absolutepath`
 
@@ -276,13 +276,13 @@ Group under which storj_exporter is running.
 
 Default value: $storj_exporter::group
 
-##### `usershell`
+##### `user_shell`
 
 Data type: `Stdlib::Absolutepath`
 
 if requested, we create a user for storj_exporter. The default shell is false. It can be overwritten to any valid path.
 
-Default value: $storj_exporter::usershell
+Default value: $storj_exporter::user_shell
 
 ##### `extra_groups`
 

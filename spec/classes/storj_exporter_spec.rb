@@ -18,9 +18,25 @@ describe 'storj_exporter' do
             parameters
           end
 
+          s_manage_python = parameters[:manage_python].nil? ? true : parameters[:manage_python]
+
           # Compilation
           it {
             is_expected.to compile
+          }
+
+          # Implementation
+          it {
+            is_expected.to contain_class('storj_exporter::install')
+            is_expected.to contain_class('storj_exporter::service')
+
+            if s_manage_python
+              is_expected.to contain_class('python').with(
+                'version' => 'python3',
+              )
+            else
+              is_expected.not_to contain_class('python')
+            end
           }
         end
       end
