@@ -28,7 +28,7 @@ For more information see [REFERENCE.md](REFERENCE.md).
 include storj_exporter
 ```
 
-### Examples
+## Examples
 
 #### Personal python installation
 

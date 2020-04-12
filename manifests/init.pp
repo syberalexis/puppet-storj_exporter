@@ -22,7 +22,7 @@
 #  User running storj_exporter.
 # @param group
 #  Group under which storj_exporter is running.
-# @param usershell
+# @param user_shell
 #  if requested, we create a user for storj_exporter. The default shell is false. It can be overwritten to any valid path.
 # @param extra_groups
 #  Add other groups to the managed user.
@@ -57,7 +57,7 @@ class storj_exporter (
   Boolean                                          $manage_group             = true,
   String                                           $user                     = 'storj_exporter',
   String                                           $group                    = 'storj_exporter',
-  Stdlib::Absolutepath                             $usershell                = '/bin/false',
+  Stdlib::Absolutepath                             $user_shell               = '/bin/false',
   Array[String]                                    $extra_groups             = [],
 
   # Service
