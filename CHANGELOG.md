@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## Release 1.0.1
+
+**Bug Fixes**
+
+- Add ensure_resource to declare class python
+
 ## Release 1.0.0
 
 First Major Release
