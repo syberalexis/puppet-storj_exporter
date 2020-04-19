@@ -51,6 +51,14 @@ Directory where binaries are located.
 
 Default value: '/usr/local/bin'
 
+##### `base_url`
+
+Data type: `Stdlib::HTTPUrl`
+
+Base URL for Storj Exporter.
+
+Default value: 'https://github.com/anclrii/Storj-Exporter/archive'
+
 ##### `download_extension`
 
 Data type: `String`
@@ -171,14 +179,6 @@ Data type: `Array[String]`
 Python required package list.
 
 Default value: ['requests', 'prometheus_client']
-
-##### `base_url`
-
-Data type: `Stdlib::HTTPUrl`
-
-
-
-Default value: 'https://github.com/anclrii/Storj-Exporter/archive'
 
 ### storj_exporter::install
 

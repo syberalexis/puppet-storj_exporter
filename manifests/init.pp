@@ -8,6 +8,8 @@
 #  Base directory where Storj is extracted.
 # @param bin_dir
 #  Directory where binaries are located.
+# @param base_url
+#  Base URL for Storj Exporter.
 # @param download_extension
 #  Extension of Storj exporter binaries archive.
 # @param download_url
