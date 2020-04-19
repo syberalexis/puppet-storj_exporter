@@ -84,9 +84,7 @@ class storj_exporter (
   Class['storj_exporter::install'] -> Class['storj_exporter::service']
 
   if $manage_python {
-    class { 'python':
-      version => 'python3',
-    }
+    ensure_resource('class', 'python', { version => 'python3' })
 
     Class['python'] -> Class['storj_exporter::service']
   }
